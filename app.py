@@ -1,3 +1,14 @@
+import os
+import sys
+import subprocess
+
+# تثبيت تبعيات FFmpeg إذا كانت مفقودة
+try:
+    from moviepy.editor import VideoFileClip
+except ImportError:
+    # محاولة تثبيت moviepy تلقائياً
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "moviepy[full]"])
+    from moviepy.editor import VideoFileClip
 import streamlit as st
 import os
 import tempfile
