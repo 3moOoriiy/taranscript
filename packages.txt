@@ -1,1 +1,4 @@
 ffmpeg
+libavdevice-dev
+libavfilter-dev
+libopus-dev
